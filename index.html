@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SessionSweep Firebase Test</title>
+  </head>
+  <body>
+    <h2>SessionSweep Firebase Setup Test</h2>
+    <p>If Firebase is connected correctly, you’ll see a message in the console.</p>
+
+    <!-- ✅ Use "compat" versions (old-style syntax) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics-compat.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAu6T59HWSEh9_tGluCvCHYlHzPUNf8UAM",
+        authDomain: "sessionsweep-2f745.firebaseapp.com",
+        projectId: "sessionsweep-2f745",
+        storageBucket: "sessionsweep-2f745.appspot.com",
+        messagingSenderId: "457878580079",
+        appId: "1:457878580079:web:7efc14d4f37a1ddf7ed69a",
+        measurementId: "G-FC58S7LETE"
+      };
+
+      // Initialize Firebase (old-style global syntax)
+      firebase.initializeApp(firebaseConfig);
+      console.log("✅ Firebase initialized successfully!");
+    </script>
+  </body>
+</html>
