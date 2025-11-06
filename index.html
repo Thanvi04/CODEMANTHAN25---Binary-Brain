@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SessionSweep Firebase Test</title>
+    <title>SessionSweep Gmail Scanner</title>
   </head>
   <body>
-    <h2>SessionSweep Firebase Setup Test</h2>
-    <p>If Firebase is connected correctly, you’ll see a message in the console.</p>
+    <h2>SessionSweep Gmail Scanner</h2>
+    <p>Click the button below to sign in and start scanning your Gmail.</p>
+    <button id="login">Sign in and Scan</button>
 
-    <!-- ✅ Use "compat" versions (old-style syntax) -->
+    <h3>Detected Services:</h3>
+    <ul id="services"></ul>
+
+    <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
 
     <script>
+      // ✅ Your existing Firebase config
       const firebaseConfig = {
         apiKey: "AIzaSyAu6T59HWSEh9_tGluCvCHYlHzPUNf8UAM",
         authDomain: "sessionsweep-2f745.firebaseapp.com",
@@ -24,9 +30,14 @@
         measurementId: "G-FC58S7LETE"
       };
 
-      // Initialize Firebase (old-style global syntax)
+      // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
       console.log("✅ Firebase initialized successfully!");
     </script>
+
+    <!-- link to your Gmail scanning logic -->
+    <script src="script.js"></script>
   </body>
 </html>
+
